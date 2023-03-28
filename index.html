@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Intereses</title>
+    <meta name="description" content="Calculadora de plan de retiro">
+    <meta name="author" content="Ariel, Brayan, Aldair">
+    <link rel="shortcut icon" href="./money.png" type="image/x-icon">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-light">
+<main class="vh-100 px-3">
+    <h1 class="text-center mb-3 mt-3">Calculadora de Intereses</h1>
+	<div class="row text-center">
+        <div class="col-12 col-md-3 col-lg-4 mb-3" id="money">
+            <img src="./money.png" alt="" class="img-fluid" width="450">
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+                <div class="mb-3">
+                    <label class="form-label" for="tasa">Tasa de Interés (%): </label>
+                    <input class="form-control" id="tasa" type="number">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="semanas">Semanas: </label>
+                    <input class="form-control" id="semanas" type="number">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="periodo">Periodo:</label>
+                    <select class="form-select" id="periodo" name="periodo">
+                    <option value="1">Diario</option>
+                    <option value="7">Semanal</option>
+                    <option value="15">Quincenal</option>
+                    <option value="30">Mensual</option>
+                    <option value="90">Trimestral</option>
+                    <option value="365">Anual</option>
+                    </select>
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label" for="montoInicial">Monto Inicial: </label>
+                    <input class="form-control" id="montoInicial" type="number">
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label" for="monto">Monto Semanal: </label>
+                    <input class="form-control" id="monto" type="number">
+                </div>
+                <div class="mb-3 d-grid">
+                    <button id="btn_principal" class="btn btn-secondary" onclick="calcular()">Calcular</button>
+                </div>
+                <div class="mb-3">
+                    <hr>
+                    <h2>Resultados</h2>
+                    <p>Total Invertido: <b><span id="invertidoTotal"></span></b></p>
+                    <p>Saldo: <b><span id="saldoTotal"></span></b></p>
+                    <p>Ganancias: <b><span id="interesTotal"></span></b></p>
+                </div>
+        </div>
+        <div class="col-12 col-md-3 col-lg-2"></div>
+    </div>
+</main>
+
+    <script src="./script.js"></script>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
